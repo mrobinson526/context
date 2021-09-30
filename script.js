@@ -6,9 +6,7 @@ var createH3 = function() {
 
   if (accusation > 100) {
     console.log("Reached 100;");
-    $(".container>h3").click(function() {
-      alert("Accusation" [i] + ": " + "I accuse " + friendArr[i] + ", " + "with the " + weaponArr[i] + " in the " + locationArr[i] + "!" );
-    })
+    displayArr();
     return;
   } else {
     createH3();
@@ -17,6 +15,8 @@ var createH3 = function() {
 
 $(document).ready(function() {
   createH3();
+  $('.container>h3').click(function() {
+    alert("Accusation" [i] + ": " + "I accuse " + friendArr[i] + ", " + "with the " + weaponArr[i] + " in the " + locationArr[i] + "!" );
   });
   
   function makeArr() {
@@ -36,4 +36,4 @@ $(document).ready(function() {
   }
   var myArr = makeArr();
   myArr();
-  
+});
